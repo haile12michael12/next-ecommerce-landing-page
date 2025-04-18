@@ -10,6 +10,7 @@ module.exports = {
       container: {
         center: true,
         padding: "15px",
+        darkMode: 'class',
       },
       colors: {
         accent: "#FF8F9C",

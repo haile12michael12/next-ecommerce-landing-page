@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-white text-neutral-darkest dark:bg-neutral-darkest dark:text-white;
+    font-feature-settings: "kern";
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .btn {
+    @apply inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+  
+  .btn-primary {
+    @apply btn bg-primary text-white hover:bg-primary-dark focus:ring-primary;
+  }
+  
+  .btn-secondary {
+    @apply btn bg-secondary text-white hover:bg-secondary-dark focus:ring-secondary;
+  }
+  
+  .btn-outline {
+    @apply btn border border-neutral-light bg-transparent hover:bg-neutral-lightest focus:ring-neutral;
+  }
+
+  .card {
+    @apply overflow-hidden rounded-lg bg-white shadow-md transition-shadow hover:shadow-lg dark:bg-neutral-dark;
+  }
+  
+  .input {
+    @apply rounded-md border border-neutral-light bg-white px-4 py-2 text-neutral-darkest focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary dark:bg-neutral-dark dark:text-white;
+  }
+  
+  .badge {
+    @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium;
+  }
+
+  .badge-primary {
+    @apply badge bg-primary-light text-white;
+  }
+  
+  .badge-secondary {
+    @apply badge bg-secondary-light text-white;
+  }
+  
+  .badge-accent {
+    @apply badge bg-accent-light text-neutral-darkest;
+  }
+}
+
+/* Custom animations */
+.hover-scale {
+  @apply transition-transform duration-200;
+}
+
+.hover-scale:hover {
+  @apply transform scale-105;
+}
+
+/* Utilities */
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-neutral-lightest dark:bg-neutral-dark;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply rounded-full bg-neutral-light dark:bg-neutral;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-neutral dark:bg-neutral-light;
+}
+
+/* Remove input autofill background */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: inherit;
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+  transition: background-color 5000s ease-in-out 0s;
+}

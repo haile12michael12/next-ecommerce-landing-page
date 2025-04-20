@@ -21,14 +21,14 @@ class MyDocument extends Document {
           
           {/* Open Graph / Social Media */}
           <meta property="og:type" content="website" />
-          <meta property="og:title" content="ShopNest - Premium eCommerce" />
+          <meta property="og:title" content="ShegaShop - Premium eCommerce" />
           <meta property="og:description" content="Your premium eCommerce destination with multi-language support" />
           <meta property="og:image" content="/og-image.jpg" />
-          <meta property="og:url" content="https://shopnest.com" />
+          <meta property="og:url" content="https://ShegaShop.com" />
           
           {/* Twitter */}
           <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content="ShopNest - Premium eCommerce" />
+          <meta name="twitter:title" content="ShegaShop - Premium eCommerce" />
           <meta name="twitter:description" content="Your premium eCommerce destination with multi-language support" />
           <meta name="twitter:image" content="/twitter-image.jpg" />
         </Head>

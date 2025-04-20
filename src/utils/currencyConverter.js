@@ -61,7 +61,7 @@ export const formatPrice = (price, currency = 'USD') => {
   const symbol = currencySymbols[currency] || '$';
   
   // Format based on currency conventions
-  if (currency === 'JPY' || currency === 'CNY') {
+  if (currency === 'birr' || currency === 'CNY') {
     return `${symbol}${Math.round(price)}`;
   }
   
